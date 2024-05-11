@@ -1,0 +1,128 @@
+.projects {
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 100px, 256px);
+    @include fluid(margin-bottom, 150px, 206px);
+
+    &-box {
+      position: absolute;
+      right: 0;
+      right: 0;
+      @include fluid(width, 580px, 960px);
+    }
+  }
+
+  .title--overlaid {
+    @include fluid(top, -60px, -118px);
+    @include fluid(right, 10px, 120px);
+    left: unset;
+  }
+
+  &__slide {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../../assets/images/services/fon.png');
+      background-repeat: no-repeat;
+      inset: 0;
+      background-size: cover;
+      pointer-events: none;
+    }
+
+    &-img {
+      @include fluid(height, 500px, 707px);
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    &-box {
+      position: absolute;
+      z-index: 1;
+      @include fluid(left, 20px, 50px);
+      @include fluid(bottom, 20px, 43px);
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 16px, 20px);
+    }
+
+    &-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @include fluid(font-size, 12px, 14px);
+      text-wrap: balance;
+    }
+  }
+
+  &__item {
+    @include fluid(max-width, 345px, 380px);
+
+    &-title {
+      @include fluid(margin-bottom, 20px, 40px);
+    }
+
+    &-text {
+      &:has(+*) {
+        @include fluid(margin-bottom, 15px, 30px);
+      }
+
+      &:has(+.projects__item-btn) {
+        @include fluid(margin-bottom, 30px, 60px);
+      }
+    }
+
+    &-btn {
+      @include fluid(margin-bottom, 60px, 132px);
+    }
+
+    &-bot {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .projects {
+    &__wrapper {
+      &-box {
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .projects {
+    &__wrapper {
+      margin-bottom: 100px;
+
+      &-box {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__item {
+      max-width: unset;
+      display: flex;
+      flex-direction: column;
+
+      &-btn {
+        margin-bottom: 0;
+      }
+
+      &-bot {
+        order: -1;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

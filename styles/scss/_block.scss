@@ -1,0 +1,71 @@
+.block {
+
+  &--alt {
+    .block {
+      &__wrapper {
+        position: relative;
+        @include fluid(padding-top, 100px, 196px);
+        @include fluid(padding-bottom, 100px, 160px);
+        margin: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background-image: url('../../assets/images/fon.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: -3;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @include fluid(margin-top, 100px, 196px);
+    @include fluid(margin-bottom, 100px, 160px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    @include fluid(gap, 20px, 90px);
+  }
+
+  &__img {
+    @include fluid(height, 500px, 718px);
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 15px, 25px);
+    @include fluid(margin-bottom, 25px, 40px);
+
+    &-title {
+      @include fluid(font-size, 20px, 28px);
+      font-weight: 700;
+    }
+
+    &-text {
+      color: #B9BABA;
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .block {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}

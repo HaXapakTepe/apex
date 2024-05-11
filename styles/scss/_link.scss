@@ -1,0 +1,12 @@
+.link {
+  font-family: 'Roboto Condensed';
+  @include fluid(font-size, 10px, 12px);
+  letter-spacing: 0.035em;
+  font-weight: 500;
+  color: #F83737;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline 1px solid #F83737;
+  text-decoration: underline 1px solid #F83737;
+  text-underline-offset: 5px;
+  letter-spacing: 0.28em;
+}

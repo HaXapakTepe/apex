@@ -1,0 +1,45 @@
+.header {
+  position: relative;
+  @include fluid(padding-top, 30px, 55px);
+  @include fluid(padding-bottom, 30px, 53px);
+  border: 1px solid #2F3032;
+  background-color: #18191c;
+
+  .logo {
+    position: absolute;
+    @include fluid(top, 30px, 42px);
+    @include fluid(left, 20px, 86px);
+  }
+
+  &--pos {
+    padding: 0;
+    border: none;
+    position: absolute;
+    @include fluid(top, 30px, 55px);
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    z-index: 15;
+
+    .logo {
+      position: absolute;
+      @include fluid(top, -5px, -12px);
+      @include fluid(left, 20px, 70px);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+@media(max-width:768px) {
+  .header {
+    .container {
+      max-width: 650px;
+    }
+  }
+}

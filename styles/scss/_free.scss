@@ -1,0 +1,166 @@
+.free {
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 100px, 223px);
+    @include fluid(margin-bottom, 100px, 256px);
+    @include fluid(padding-top, 40px, 65px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      @include fluid(height, 400px, 660px);
+      background-image: url('../../assets/images/fon.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -2;
+    }
+
+    &-box {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 50%;
+    }
+  }
+
+  .title--overlaid {
+    @include fluid(top, -55px, -105px);
+    @include fluid(left, 10px, 97px);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    @include fluid(height, 400px, 660px);
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left;
+    object-position: left;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__image {
+    margin-left: auto;
+    @include fluid(margin-right, -50px, -102px);
+    padding-bottom: 6px;
+
+    &-box {
+      position: relative;
+
+      .border {
+        width: 103%;
+        height: 103%;
+      }
+    }
+
+    &-img {
+      @include fluid(height, 370px, 665px);
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    @include fluid(max-width, 300px, 485px);
+    @include fluid(margin-top, 30px, 69px);
+
+    &-textTop {
+      max-width: 270px;
+      @include fluid(margin-bottom, 15px, 37px);
+      margin-left: auto;
+      font-weight: 700;
+      @include fluid(font-size, 12px, 14px);
+      color: #79797B;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      @include fluid(margin-bottom, 16px, 26px);
+    }
+
+    &-subtitle {
+      @include fluid(margin-bottom, 12px, 16px);
+    }
+
+    &-text {
+      @include fluid(margin-bottom, 25px, 52px);
+      max-width: 420px;
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .free {
+    &__wrapper {
+      &-box {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .free {
+    &__image {
+      &-box {
+        position: relative;
+
+        .border {
+          width: 105%;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .free {
+    &__wrapper {
+      padding-bottom: 40px;
+    }
+
+    &__inner {
+      position: relative;
+    }
+
+    &__img {
+      height: 100%;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: unset;
+      max-width: unset;
+
+      &-textTop {
+        max-width: unset;
+        margin-left: unset;
+        text-align: center;
+      }
+
+      &-title {
+        text-align: center;
+        text-wrap: balance;
+      }
+    }
+  }
+}

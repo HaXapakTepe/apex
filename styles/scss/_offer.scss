@@ -1,0 +1,113 @@
+.offer {
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 60px, 100px);
+    @include fluid(margin-bottom, 100px, 206px);
+    @include fluid(padding-top, 100px, 273px);
+    @include fluid(padding-bottom, 20px, 43px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-image: url('../../assets/images/fon.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -2;
+    }
+
+    &-box {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      width: 49%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    @include fluid(top, 20px, 80px);
+    left: 0;
+    height: 100%;
+    @include fluid(height, 400px, 796px);
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left;
+    object-position: left;
+    z-index: -1;
+  }
+
+  &__inner {
+    display: flex;
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    @include fluid(max-width, 420px, 659px);
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 10px, 20px);
+    @include fluid(margin-bottom, 50px, 121px);
+
+    &-title {
+      text-wrap: balance;
+      @include fluid(margin-bottom, 16px, 26px);
+    }
+
+    &-subtitle {
+      @include fluid(max-width, 440px, 598px);
+      letter-spacing: 0.15em;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+    @include fluid(max-width, 400px, 485px);
+  }
+}
+
+@media(max-width: 768px) {
+  .offer {
+    &__wrapper {
+      padding-top: 40px;
+
+      &::after {
+        height: 100%;
+      }
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: unset;
+      margin-bottom: 20px;
+
+      &-title {
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      &-subtitle {
+        max-width: unset;
+        text-align: center;
+      }
+    }
+
+    &__btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

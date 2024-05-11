@@ -1,0 +1,43 @@
+h1.title {
+  @include fluid(font-size, 26px, 65px);
+}
+
+.title {
+  font-family: 'Roboto Condensed';
+  @include fluid(font-size, 24px, 40px);
+  line-height: 1.17;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--big {
+    @include fluid(font-size, 28px, 65px);
+  }
+
+  &--small {
+    @include fluid(font-size, 18px, 24px);
+    letter-spacing: 0;
+  }
+
+  &__accent {
+    color: #F83737;
+  }
+
+  &--overlaid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    font-family: 'Lato', sans-serif;
+    @include fluid(font-size, 80px, 150px);
+    @include fluid(letter-spacing, -2px, -5px);
+    color: #26272A;
+    font-weight: 800;
+    text-transform: initial;
+  }
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/css/normalize.css" />
+  <link rel="stylesheet" href="./styles/css/style.css?v=0.0001" />
+  <title>Услуги</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <a class="logo" href="#">
+        <img class="logo__img" src="./assets/images/logo.png" alt="" />
+      </a>
+      <div class="container">
+        <div class="header__inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Услуги
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Проекты
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Цены
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Лицензии
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="tel:+74999644634">
+                  +7 (499) 964-46-34
+                </a>
+              </li>
+              <li class="menu__item menu__item--hidden">
+                <div class="socials">
+                  <a class="socials__icon" href="#">
+                    <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.8042 1.05528V5.42518C12.7992 5.49737 12.8124 5.56964 12.8427 5.63605C12.873 5.70245 12.9195 5.76111 12.9784 5.80712C13.0373 5.85313 13.1069 5.88516 13.1814 5.90064C13.256 5.91612 13.3334 5.91459 13.4072 5.89614C13.8319 5.86796 14.7916 2.13934 15.2177 1.32626C15.4439 0.867808 15.8072 0.482449 16.2625 0.21802C16.4059 0.0948772 16.5889 0.0211322 16.782 0.00870536H20.856C20.966 0.0262524 21.0695 0.0700583 21.1566 0.135965C21.2438 0.201871 21.3117 0.287693 21.3542 0.385407C21.3967 0.48312 21.4123 0.589487 21.3994 0.694465C21.3865 0.799444 21.3457 0.89963 21.2807 0.985508C20.9622 1.65636 18.2301 5.82904 18.0886 5.99809C17.9181 6.21624 17.8033 6.46888 17.7531 6.7361C17.8087 7.0519 17.9625 7.34473 18.1947 7.57729C18.4779 7.88051 20.7654 10.2607 20.9792 10.4687C21.1807 10.688 21.3153 10.9551 21.3685 11.2415C21.3175 11.4857 21.1744 11.7038 20.9659 11.8552C20.7575 12.0066 20.498 12.0808 20.236 12.064C19.3499 12.064 17.1698 12.064 16.9207 12.064C16.4227 11.8988 15.9646 11.6411 15.5731 11.3059C15.2546 11.0375 14.074 9.76027 13.897 9.59256C13.8371 9.52429 13.7606 9.47086 13.674 9.43696C13.5874 9.40306 13.4934 9.38968 13.4001 9.39798C13.1878 9.39798 12.7843 9.41814 12.8027 10.1829C12.8533 10.7127 12.7361 11.2448 12.4659 11.7111C12.3277 11.8367 12.1638 11.9343 11.9844 11.9977C11.805 12.0612 11.6138 12.0892 11.4226 12.0801C9.97461 12.1633 8.53463 11.8228 7.29757 11.1047C5.06944 9.79383 2.5327 6.29059 1.3521 4.0553C0.647887 2.94552 0.21277 1.70132 0.078125 0.412595C0.148904 0.176453 0.148836 0.0100975 0.397979 0.0100975C0.647122 0.0100975 3.77986 0.0100975 4.07855 0.0100975C4.28564 0.106837 4.45838 0.258864 4.57544 0.44748C4.68161 0.581652 5.49127 2.87863 5.73899 3.28248C5.98672 3.68634 7.20834 5.89884 7.87084 5.89884C8.09081 5.8579 8.2848 5.73623 8.41049 5.5603C8.53619 5.38436 8.58339 5.16842 8.54182 4.95962C8.54182 4.42294 8.54182 2.30439 8.54182 2.0347C8.27254 1.43978 7.77896 0.961393 7.15743 0.692991C7.31221 0.498124 7.50964 0.337252 7.73614 0.22146C7.96264 0.105667 8.21286 0.0376918 8.46968 0.0221356C9.31903 -0.0114072 11.4495 -0.0114249 11.9095 0.054319C12.1565 0.0999677 12.3796 0.224022 12.5422 0.405961C12.7049 0.587901 12.7973 0.816916 12.8042 1.05528Z"
+                        fill="#3D3F43" />
+                    </svg>
+                  </a>
+                  <a class="socials__icon" href="#">
+                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.6539 17.6937H5.74484C4.18126 17.632 2.70729 16.9852 1.64592 15.8952C0.584542 14.8052 0.022325 13.3609 0.0825029 11.8788V6.06511C0.023086 4.58326 0.58561 3.13942 1.64687 2.0498C2.70813 0.960188 4.18165 0.313574 5.74484 0.251465H15.6539C17.2174 0.31357 18.6911 0.960386 19.7524 2.05029C20.8137 3.1402 21.3761 4.58434 21.3163 6.06642V11.8801C21.3761 13.362 20.8137 14.806 19.7523 15.8957C18.691 16.9854 17.2173 17.632 15.6539 17.6937ZM18.4851 5.96045C18.5284 5.20579 18.2551 4.46553 17.7247 3.90121C17.1943 3.33688 16.4498 2.99433 15.6539 2.94832H5.74484C4.94893 2.99433 4.2045 3.33688 3.67408 3.90121C3.14366 4.46553 2.87032 5.20579 2.91367 5.96045V11.9834C2.87032 12.7381 3.14366 13.4783 3.67408 14.0427C4.2045 14.607 4.94893 14.9495 5.74484 14.9955H15.6539C16.4498 14.9495 17.1943 14.607 17.7247 14.0427C18.2551 13.4783 18.5284 12.7381 18.4851 11.9834V5.96045ZM8.57601 5.60087L14.2383 8.97259L8.57601 12.3416V5.60087Z"
+                        fill="#3D3F43" />
+                    </svg>
+                  </a>
+                  <a class="socials__icon" href="#">
+                    <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.1282 1.31588L1.30264 8.49943C0.862481 8.65892 0.863288 9.28171 1.30386 9.44006L6.2203 11.2071C6.35899 11.2569 6.51261 11.2431 6.64012 11.1692L14.1046 6.84332C14.6206 6.54432 15.1326 7.23699 14.6954 7.64251L10.0761 11.927C9.85479 12.1323 9.86444 12.4853 10.0966 12.6782L17.0882 18.4857C17.3733 18.7226 17.808 18.5777 17.894 18.2171L21.7849 1.90197C21.8772 1.51489 21.5023 1.18032 21.1282 1.31588Z"
+                        fill="#3D3F43" stroke="#3D3F43" stroke-width="0.696356" />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger">
+            <div class="burger__line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item">
+              <a class="breadcrumbs__list-link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="breadcrumbs__list-item">
+              <a class="breadcrumbs__list-link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container">
+          <h2 class="contacts__title title title--big title--center">
+            Апекс - <span class="title__accent">контакты</span>
+          </h2>
+        </div>
+        <div class="contacts__wrapper">
+          <p class="title title--overlaid">
+            КОНТАКТЫ
+          </p>
+          <div class="map">
+            <div class="map__item" id="mapYandex"></div>
+          </div>
+          <div class="container">
+            <div class="contacts__item">
+              <div class="contacts__item-box">
+                <img class="contacts__item-icon" src="./assets/images/icons/loca.svg" alt="">
+                <div class="contacts__item-column">
+                  <p class="contacts__item-title">
+                    адрес:
+                  </p>
+                  <p class="contacts__item-text">
+                    г. Москва, ул. Название, д номер
+                  </p>
+                </div>
+              </div>
+              <div class="contacts__item-box">
+                <img class="contacts__item-icon" src="./assets/images/icons/phone.svg" alt="">
+                <div class="contacts__item-column">
+                  <p class="contacts__item-title">
+                    телефон:
+                  </p>
+                  <a class="contacts__item-link" href="tel:+74999644634">
+                    +7 (499) 964-46-34
+                  </a>
+                </div>
+              </div>
+              <div class="contacts__item-box">
+                <img class="contacts__item-icon" src="./assets/images/icons/mail.svg" alt="">
+                <div class="contacts__item-column">
+                  <p class="contacts__item-title">
+                    email:
+                  </p>
+                  <a class="contacts__item-link link" href="mailto:apex@apexmsk.ru">
+                    apex@apexmsk.ru
+                  </a>
+                </div>
+              </div>
+              <div class="contacts__item-box">
+                <img class="contacts__item-icon" src="./assets/images/icons/clock.svg" alt="">
+                <div class="contacts__item-column">
+                  <p class="contacts__item-title">
+                    Время работы:
+                  </p>
+                  <p class="contacts__item-text">
+                    пн-пт: 9-18
+                    <br>
+                    сб-вс: 10-18
+                  </p>
+                </div>
+              </div>
+              <div class="contacts__item-box">
+                <div class="contacts__item-column contacts__item-column--ml">
+                  <p class="contacts__item-title">
+                    мы в соцсетях:
+                  </p>
+                  <div class="socials socials--row">
+                    <a class="socials__icon" href="#">
+                      <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8042 1.05528V5.42518C12.7992 5.49737 12.8124 5.56964 12.8427 5.63605C12.873 5.70245 12.9195 5.76111 12.9784 5.80712C13.0373 5.85313 13.1069 5.88516 13.1814 5.90064C13.256 5.91612 13.3334 5.91459 13.4072 5.89614C13.8319 5.86796 14.7916 2.13934 15.2177 1.32626C15.4439 0.867808 15.8072 0.482449 16.2625 0.21802C16.4059 0.0948772 16.5889 0.0211322 16.782 0.00870536H20.856C20.966 0.0262524 21.0695 0.0700583 21.1566 0.135965C21.2438 0.201871 21.3117 0.287693 21.3542 0.385407C21.3967 0.48312 21.4123 0.589487 21.3994 0.694465C21.3865 0.799444 21.3457 0.89963 21.2807 0.985508C20.9622 1.65636 18.2301 5.82904 18.0886 5.99809C17.9181 6.21624 17.8033 6.46888 17.7531 6.7361C17.8087 7.0519 17.9625 7.34473 18.1947 7.57729C18.4779 7.88051 20.7654 10.2607 20.9792 10.4687C21.1807 10.688 21.3153 10.9551 21.3685 11.2415C21.3175 11.4857 21.1744 11.7038 20.9659 11.8552C20.7575 12.0066 20.498 12.0808 20.236 12.064C19.3499 12.064 17.1698 12.064 16.9207 12.064C16.4227 11.8988 15.9646 11.6411 15.5731 11.3059C15.2546 11.0375 14.074 9.76027 13.897 9.59256C13.8371 9.52429 13.7606 9.47086 13.674 9.43696C13.5874 9.40306 13.4934 9.38968 13.4001 9.39798C13.1878 9.39798 12.7843 9.41814 12.8027 10.1829C12.8533 10.7127 12.7361 11.2448 12.4659 11.7111C12.3277 11.8367 12.1638 11.9343 11.9844 11.9977C11.805 12.0612 11.6138 12.0892 11.4226 12.0801C9.97461 12.1633 8.53463 11.8228 7.29757 11.1047C5.06944 9.79383 2.5327 6.29059 1.3521 4.0553C0.647887 2.94552 0.21277 1.70132 0.078125 0.412595C0.148904 0.176453 0.148836 0.0100975 0.397979 0.0100975C0.647122 0.0100975 3.77986 0.0100975 4.07855 0.0100975C4.28564 0.106837 4.45838 0.258864 4.57544 0.44748C4.68161 0.581652 5.49127 2.87863 5.73899 3.28248C5.98672 3.68634 7.20834 5.89884 7.87084 5.89884C8.09081 5.8579 8.2848 5.73623 8.41049 5.5603C8.53619 5.38436 8.58339 5.16842 8.54182 4.95962C8.54182 4.42294 8.54182 2.30439 8.54182 2.0347C8.27254 1.43978 7.77896 0.961393 7.15743 0.692991C7.31221 0.498124 7.50964 0.337252 7.73614 0.22146C7.96264 0.105667 8.21286 0.0376918 8.46968 0.0221356C9.31903 -0.0114072 11.4495 -0.0114249 11.9095 0.054319C12.1565 0.0999677 12.3796 0.224022 12.5422 0.405961C12.7049 0.587901 12.7973 0.816916 12.8042 1.05528Z"
+                          fill="#3D3F43" />
+                      </svg>
+                    </a>
+                    <a class="socials__icon" href="#">
+                      <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.6539 17.6937H5.74484C4.18126 17.632 2.70729 16.9852 1.64592 15.8952C0.584542 14.8052 0.022325 13.3609 0.0825029 11.8788V6.06511C0.023086 4.58326 0.58561 3.13942 1.64687 2.0498C2.70813 0.960188 4.18165 0.313574 5.74484 0.251465H15.6539C17.2174 0.31357 18.6911 0.960386 19.7524 2.05029C20.8137 3.1402 21.3761 4.58434 21.3163 6.06642V11.8801C21.3761 13.362 20.8137 14.806 19.7523 15.8957C18.691 16.9854 17.2173 17.632 15.6539 17.6937ZM18.4851 5.96045C18.5284 5.20579 18.2551 4.46553 17.7247 3.90121C17.1943 3.33688 16.4498 2.99433 15.6539 2.94832H5.74484C4.94893 2.99433 4.2045 3.33688 3.67408 3.90121C3.14366 4.46553 2.87032 5.20579 2.91367 5.96045V11.9834C2.87032 12.7381 3.14366 13.4783 3.67408 14.0427C4.2045 14.607 4.94893 14.9495 5.74484 14.9955H15.6539C16.4498 14.9495 17.1943 14.607 17.7247 14.0427C18.2551 13.4783 18.5284 12.7381 18.4851 11.9834V5.96045ZM8.57601 5.60087L14.2383 8.97259L8.57601 12.3416V5.60087Z"
+                          fill="#3D3F43" />
+                      </svg>
+                    </a>
+                    <a class="socials__icon" href="#">
+                      <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.1282 1.31588L1.30264 8.49943C0.862481 8.65892 0.863288 9.28171 1.30386 9.44006L6.2203 11.2071C6.35899 11.2569 6.51261 11.2431 6.64012 11.1692L14.1046 6.84332C14.6206 6.54432 15.1326 7.23699 14.6954 7.64251L10.0761 11.927C9.85479 12.1323 9.86444 12.4853 10.0966 12.6782L17.0882 18.4857C17.3733 18.7226 17.808 18.5777 17.894 18.2171L21.7849 1.90197C21.8772 1.51489 21.5023 1.18032 21.1282 1.31588Z"
+                          fill="#3D3F43" stroke="#3D3F43" stroke-width="0.696356" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="form__wrapper">
+          <div class="container">
+            <h2 class="form__title title title--center">
+              обратная <span class="title__accent">связь</span>
+            </h2>
+            <form class="form__inner" action="">
+              <div class="form__item">
+                <div class="form__item-box">
+                  <input class="form__item-input" type="text" placeholder="Ваше имя" required>
+                  <input class="form__item-input" type="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form__item">
+                <textarea class="form__item-textarea" placeholder="Текст обращения" required></textarea>
+              </div>
+              <div class="form__item">
+                <label class="label">
+                  <input class="label__input check" type="checkbox" />
+                  <span class="label__inputCustom"></span>
+                  согласен с политикой <br> конфиденциальности
+                </label>
+              </div>
+              <button class="btn btn--alt btn--width">
+                Отправить
+                <img class="btn__icon" src="./assets/images/icons/btn-arrow.svg" alt="">
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="block block--alt">
+        <div class="block__wrapper">
+          <div class="wrapper__line">
+            <span class="wrapper__line-el"></span>
+            <span class="wrapper__line-el"></span>
+            <span class="wrapper__line-el"></span>
+            <span class="wrapper__line-el"></span>
+            <span class="wrapper__line-el"></span>
+          </div>
+          <div class="container">
+            <div class="block__inner">
+              <img class="block__img" src="./assets/images/block/1.png" alt="">
+              <div class="block__item">
+                <p class="block__item-title">Сео текст</p>
+                <p class="block__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor
+                  sit amet, consectetur adipiscintempor incididunt
+                </p>
+                <p class="block__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor
+                  sit amet, consectetur adipiscintempor incididunt
+                  Lorem ipsum dolor sit a
+                </p>
+                <p class="block__item-text">
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam, Lorem ipsum dolor sit amet, consectetur adipiscintempor incididunt
+                </p>
+                <p class="block__item-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididuntipiscintempor incididunt
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__item">
+            <a class="logo" href="#">
+              <img class="logo__img" src="./assets/images/logo.png" alt="" />
+            </a>
+            <p class="footer__item-text">
+              Исполнение охранных услуг оказывают ЧОП партнеров на основании собственной лицензии на охранную
+              деятельность.
+            </p>
+            <div class="footer__item-box">
+              <a class="footer__item-link" href="#">
+                <img class="footer__item-icon" src="./assets/images/icons/phone.svg" alt="">
+                +7 (499) 964-46-34
+              </a>
+              <a class="footer__item-link" href="#">
+                <img class="footer__item-icon" src="./assets/images/icons/mail.svg" alt="">
+                apex@apexmsk.ru
+              </a>
+              <p class="footer__item-time">
+                <img class="footer__item-icon" src="./assets/images/icons/clock.svg" alt="">
+                <span>
+                  Режим работы:
+                  <br>
+                  пн-пт: 9-18
+                  <br>
+                  сб-вс: 10-18
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="footer__item">
+            <p class="footer__item-title">
+              Услуги
+            </p>
+            <div class="footer__item-column">
+              <a class="footer__item-link" href="#">
+                Пожарная безопасность (АППЗ)
+              </a>
+              <a class="footer__item-link" href="#">
+                Проектирование монтаж обслуживание
+              </a>
+              <a class="footer__item-link" href="#">
+                Системы видеонаблюдения (СВН)
+              </a>
+              <a class="footer__item-link" href="#">
+                Пультовая охрана - Система охранно-тревожной сигнализации (СОТС)
+              </a>
+              <a class="footer__item-link" href="#">
+                Системы контроля и управления доступом (СКУД)
+              </a>
+              <a class="footer__item-link" href="#">
+                Структурированная кабельная система (СКС)
+              </a>
+            </div>
+          </div>
+          <div class="footer__item">
+            <p class="footer__item-title">
+              компания
+            </p>
+            <div class="footer__item-column">
+              <a class="footer__item-link" href="#">
+                О компании
+              </a>
+              <a class="footer__item-link" href="#">
+                Проекты
+              </a>
+              <a class="footer__item-link" href="#">
+                Блог
+              </a>
+              <a class="footer__item-link" href="#">
+                Контакты
+              </a>
+              <a class="footer__item-link" href="#">
+                Лицензии
+              </a>
+            </div>
+          </div>
+          <div class="footer__item">
+            <a class="btn btn--small" href="#">
+              связаться
+              <img class="btn__icon" src="./assets/images/icons/btn-arrow.svg" alt="">
+            </a>
+            <div class="socials socials--row">
+              <a class="socials__icon" href="#">
+                <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.8042 1.05528V5.42518C12.7992 5.49737 12.8124 5.56964 12.8427 5.63605C12.873 5.70245 12.9195 5.76111 12.9784 5.80712C13.0373 5.85313 13.1069 5.88516 13.1814 5.90064C13.256 5.91612 13.3334 5.91459 13.4072 5.89614C13.8319 5.86796 14.7916 2.13934 15.2177 1.32626C15.4439 0.867808 15.8072 0.482449 16.2625 0.21802C16.4059 0.0948772 16.5889 0.0211322 16.782 0.00870536H20.856C20.966 0.0262524 21.0695 0.0700583 21.1566 0.135965C21.2438 0.201871 21.3117 0.287693 21.3542 0.385407C21.3967 0.48312 21.4123 0.589487 21.3994 0.694465C21.3865 0.799444 21.3457 0.89963 21.2807 0.985508C20.9622 1.65636 18.2301 5.82904 18.0886 5.99809C17.9181 6.21624 17.8033 6.46888 17.7531 6.7361C17.8087 7.0519 17.9625 7.34473 18.1947 7.57729C18.4779 7.88051 20.7654 10.2607 20.9792 10.4687C21.1807 10.688 21.3153 10.9551 21.3685 11.2415C21.3175 11.4857 21.1744 11.7038 20.9659 11.8552C20.7575 12.0066 20.498 12.0808 20.236 12.064C19.3499 12.064 17.1698 12.064 16.9207 12.064C16.4227 11.8988 15.9646 11.6411 15.5731 11.3059C15.2546 11.0375 14.074 9.76027 13.897 9.59256C13.8371 9.52429 13.7606 9.47086 13.674 9.43696C13.5874 9.40306 13.4934 9.38968 13.4001 9.39798C13.1878 9.39798 12.7843 9.41814 12.8027 10.1829C12.8533 10.7127 12.7361 11.2448 12.4659 11.7111C12.3277 11.8367 12.1638 11.9343 11.9844 11.9977C11.805 12.0612 11.6138 12.0892 11.4226 12.0801C9.97461 12.1633 8.53463 11.8228 7.29757 11.1047C5.06944 9.79383 2.5327 6.29059 1.3521 4.0553C0.647887 2.94552 0.21277 1.70132 0.078125 0.412595C0.148904 0.176453 0.148836 0.0100975 0.397979 0.0100975C0.647122 0.0100975 3.77986 0.0100975 4.07855 0.0100975C4.28564 0.106837 4.45838 0.258864 4.57544 0.44748C4.68161 0.581652 5.49127 2.87863 5.73899 3.28248C5.98672 3.68634 7.20834 5.89884 7.87084 5.89884C8.09081 5.8579 8.2848 5.73623 8.41049 5.5603C8.53619 5.38436 8.58339 5.16842 8.54182 4.95962C8.54182 4.42294 8.54182 2.30439 8.54182 2.0347C8.27254 1.43978 7.77896 0.961393 7.15743 0.692991C7.31221 0.498124 7.50964 0.337252 7.73614 0.22146C7.96264 0.105667 8.21286 0.0376918 8.46968 0.0221356C9.31903 -0.0114072 11.4495 -0.0114249 11.9095 0.054319C12.1565 0.0999677 12.3796 0.224022 12.5422 0.405961C12.7049 0.587901 12.7973 0.816916 12.8042 1.05528Z"
+                    fill="#3D3F43" />
+                </svg>
+              </a>
+              <a class="socials__icon" href="#">
+                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15.6539 17.6937H5.74484C4.18126 17.632 2.70729 16.9852 1.64592 15.8952C0.584542 14.8052 0.022325 13.3609 0.0825029 11.8788V6.06511C0.023086 4.58326 0.58561 3.13942 1.64687 2.0498C2.70813 0.960188 4.18165 0.313574 5.74484 0.251465H15.6539C17.2174 0.31357 18.6911 0.960386 19.7524 2.05029C20.8137 3.1402 21.3761 4.58434 21.3163 6.06642V11.8801C21.3761 13.362 20.8137 14.806 19.7523 15.8957C18.691 16.9854 17.2173 17.632 15.6539 17.6937ZM18.4851 5.96045C18.5284 5.20579 18.2551 4.46553 17.7247 3.90121C17.1943 3.33688 16.4498 2.99433 15.6539 2.94832H5.74484C4.94893 2.99433 4.2045 3.33688 3.67408 3.90121C3.14366 4.46553 2.87032 5.20579 2.91367 5.96045V11.9834C2.87032 12.7381 3.14366 13.4783 3.67408 14.0427C4.2045 14.607 4.94893 14.9495 5.74484 14.9955H15.6539C16.4498 14.9495 17.1943 14.607 17.7247 14.0427C18.2551 13.4783 18.5284 12.7381 18.4851 11.9834V5.96045ZM8.57601 5.60087L14.2383 8.97259L8.57601 12.3416V5.60087Z"
+                    fill="#3D3F43" />
+                </svg>
+              </a>
+              <a class="socials__icon" href="#">
+                <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.1282 1.31588L1.30264 8.49943C0.862481 8.65892 0.863288 9.28171 1.30386 9.44006L6.2203 11.2071C6.35899 11.2569 6.51261 11.2431 6.64012 11.1692L14.1046 6.84332C14.6206 6.54432 15.1326 7.23699 14.6954 7.64251L10.0761 11.927C9.85479 12.1323 9.86444 12.4853 10.0966 12.6782L17.0882 18.4857C17.3733 18.7226 17.808 18.5777 17.894 18.2171L21.7849 1.90197C21.8772 1.51489 21.5023 1.18032 21.1282 1.31588Z"
+                    fill="#3D3F43" stroke="#3D3F43" stroke-width="0.696356" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <div class="container">
+          <div class="footer__bot-box">
+            <p class="footer__bot-copy">
+              © 2015-2023 "АПЕКС - Системы безопасности"
+            </p>
+            <a class="footer__bot-link" href="#">
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="./scripts/animation.js"></script>
+  <script src="./scripts/map.js"></script>
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

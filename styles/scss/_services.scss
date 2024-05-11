@@ -1,0 +1,185 @@
+.services {
+
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 100px, 150px);
+    @include fluid(margin-bottom, 100px, 140px);
+
+    &--mbNone {
+      @include fluid(margin-top, 40px, 80px);
+      margin-bottom: 0;
+    }
+  }
+
+  .title--overlaid {
+    @include fluid(top, 20px, 60px);
+    @include fluid(right, 10px, 90px);
+    left: unset;
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 40px, 95px);
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    z-index: 1;
+    @include fluid(padding-top, 20px, 60px);
+    @include fluid(padding-bottom, 20px, 60px);
+    @include fluid(padding-left, 20px, 69px);
+    @include fluid(padding-right, 20px, 38px);
+    @include fluid(height, 600px, 830px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../../assets/images/services/fon.png');
+      background-repeat: no-repeat;
+      inset: 0;
+      z-index: -1;
+      background-size: cover;
+      pointer-events: none;
+    }
+
+    &:hover {
+      .border {
+        width: 94%;
+        height: 96%;
+        opacity: 1;
+      }
+    }
+
+    &-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      z-index: 2;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    &-bot {
+      display: flex;
+      @include fluid(gap, 20px, 60px);
+      align-items: end;
+    }
+
+    &-link {
+      position: relative;
+      font-family: 'Roboto Condensed';
+      color: #fff;
+      font-weight: 500;
+      width: 20px;
+      height: 100px;
+      min-width: 20px;
+      text-transform: uppercase;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+
+    &-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #fff;
+      @include fluid(font-size, 12px, 14px);
+    }
+
+    .border {
+      opacity: 0;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      &:hover {
+        .border {
+          width: 94%;
+          height: 96%;
+          opacity: 1;
+        }
+      }
+    }
+
+    .services__item {
+      @include fluid(height, 550px, 750px);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 15px, 30px);
+    @include fluid(padding-top, 20px, 60px);
+    @include fluid(padding-bottom, 20px, 60px);
+    @include fluid(padding-left, 20px, 70px);
+    @include fluid(padding-right, 20px, 70px);
+    // background-color: #18191c;
+
+    &-text {
+      position: relative;
+      @include fluid(padding-left, 20px, 25px);
+      color: #5F6061;
+      @include fluid(line-height, 18px, 24px);
+
+      &::after {
+        content: '';
+        position: absolute;
+        @include fluid(top, 8px, 12px);
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background-color: #F83737;
+      }
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .services {
+    &__inner {
+      grid-template-columns: 1fr;
+
+      &-box {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media(max-width:576px) {
+  .services {
+    &__inner {
+
+      &-box {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+      }
+    }
+  }
+}

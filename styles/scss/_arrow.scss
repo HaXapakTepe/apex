@@ -1,0 +1,90 @@
+.arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 14px;
+
+  &__next,
+  &__prev {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    transition: background-color 0.23s ease-in-out, opacity 0.23s ease-in-out, border .23s ease-in-out;
+    border-radius: 50%;
+    right: unset;
+    left: unset;
+    margin-top: unset;
+    top: unset;
+    font-family: 'Roboto Condensed';
+    font-size: 12px;
+    @include fluid(font-size, 10px, 12px);
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 18px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+
+  &__prev {
+    padding-left: 25px;
+
+    &::before {
+      left: 0;
+      background-image: url('../../assets/images/icons/swiper-left.svg');
+    }
+  }
+
+  &__next {
+    right: 0;
+    padding-right: 25px;
+
+    &::before {
+      right: 0;
+      background-image: url('../../assets/images/icons/swiper-right.svg');
+    }
+  }
+
+  &--abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    justify-content: space-between;
+    z-index: 11;
+    pointer-events: none;
+
+    .arrow {
+
+      &__prev,
+      &__next {
+        pointer-events: auto
+      }
+    }
+  }
+}

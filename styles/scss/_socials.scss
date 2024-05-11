@@ -1,0 +1,19 @@
+.socials {
+  display: flex;
+  flex-direction: column;
+  @include fluid(gap, 16px, 25px);
+
+  &--row {
+    flex-direction: row;
+  }
+
+  &__icon {
+    &:hover {
+      svg {
+        path {
+          fill: #F83737;
+        }
+      }
+    }
+  }
+}

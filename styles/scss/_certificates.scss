@@ -1,0 +1,55 @@
+.certificates {
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 100px, 200px);
+    @include fluid(margin-bottom, 60px, 104px);
+  }
+
+  .title--overlaid {
+    @include fluid(top, 65px, 100px);
+    @include fluid(right, 10px, 120px);
+    left: unset;
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 30px, 70px);
+  }
+
+  &__text {
+    max-width: 400px;
+    @include fluid(margin-bottom, 15px, 35px);
+    color: #B9BABA;
+    text-wrap: balance;
+  }
+
+  &__swiper {
+    @include fluid(margin-bottom, 20px, 36px);
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../../assets/images/certificates/fon.png');
+      background-repeat: no-repeat;
+      inset: 0;
+      background-size: cover;
+      pointer-events: none;
+    }
+
+    &-img {
+      @include fluid(height, 380px, 530px);
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include fluid(gap, 20px, 35px);
+  }
+}

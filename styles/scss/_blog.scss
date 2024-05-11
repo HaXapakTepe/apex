@@ -1,0 +1,102 @@
+.blog {
+  &__wrapper {
+    position: relative;
+    @include fluid(margin-top, 100px, 159px);
+    @include fluid(padding-top, 50px, 100px);
+    @include fluid(padding-bottom, 50px, 130px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-image: url('../../assets/images/fon.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -3;
+    }
+  }
+
+  .title--overlaid {
+    @include fluid(top, 40px, 90px);
+    @include fluid(right, 10px, 140px);
+    left: unset;
+  }
+
+  &__title {
+    @include fluid(margin-bottom, 20px, 45px);
+  }
+
+  &__swiper {
+    overflow: visible;
+    @include fluid(margin-bottom, 20px, 35px);
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../../assets/images/blog/fon.png');
+      background-repeat: no-repeat;
+      inset: 0;
+      background-size: cover;
+      pointer-events: none;
+    }
+
+    &-img {
+      @include fluid(height, 420px, 505px);
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    &-date {
+      position: absolute;
+      @include fluid(top, 20px, 40px);
+      right: -20px;
+      transform: rotate(-90deg);
+      width: 90px;
+      display: block;
+      font-family: 'Roboto Condensed';
+      letter-spacing: 0.35em;
+      font-weight: 500;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    &-box {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      // @include fluid(left, 20px, 43px);
+      // @include fluid(bottom, 20px, 30px);
+      @include fluid(padding-left, 20px, 43px);
+      @include fluid(padding-right, 20px, 43px);
+      @include fluid(padding-bottom, 20px, 40px);
+      display: flex;
+      flex-direction: column;
+      @include fluid(gap, 16px, 20px);
+    }
+
+    &-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @include fluid(font-size, 12px, 14px);
+      text-wrap: balance;
+      color: #B9BABA;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    flex-wrap: wrap;
+    @include fluid(gap, 20px, 40px);
+    align-items: center;
+  }
+}

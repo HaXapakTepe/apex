@@ -1,0 +1,128 @@
+.btn {
+  position: relative;
+  z-index: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 55px);
+  @include fluid(padding-top, 12px, 19px);
+  @include fluid(padding-bottom, 12px, 19px);
+  @include fluid(font-size, 12px, 16px);
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  line-height: 1;
+  border: 2px solid #F83737;
+  transition: background-color 0.23s ease-in-out,
+    color 0.23s ease-in-out;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #F83737;
+    transition: width .23s ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+
+    .btn__icon {
+      opacity: 1;
+      -webkit-animation: bounceArrow 0.5s ease-in-out forwards;
+      animation: bounceArrow 0.5s ease-in-out forwards;
+    }
+  }
+
+  &--width {
+    width: 100%;
+  }
+
+  &--alt {
+    @include fluid(padding-top, 20px, 34px);
+    @include fluid(padding-bottom, 20px, 34px);
+  }
+
+  &--small {
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    @include fluid(font-size, 12px, 14px);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(430%, -55%);
+    @include fluid(right, 15px, 30px);
+    @include fluid(width, 7px, 9px);
+    @include fluid(height, 15px, 19px);
+    opacity: 0;
+    transition: transform .23s ease-in-out, opacity .23s ease-in-out;
+    -webkit-animation: bounceArrowFirst 0.5s ease-in-out forwards;
+    animation: bounceArrowFirst 0.5s ease-in-out forwards;
+  }
+}
+
+@-webkit-keyframes bounceArrow {
+  0% {
+    transform: translate(430%, -55%);
+  }
+
+  60% {
+    transform: translate(-50%, -55%);
+  }
+
+  100% {
+    transform: translate(0%, -55%);
+  }
+}
+
+@keyframes bounceArrow {
+  0% {
+    transform: translate(430%, -55%);
+  }
+
+  60% {
+    transform: translate(-100%, -55%);
+  }
+
+  100% {
+    transform: translate(0%, -55%);
+  }
+}
+
+@-webkit-keyframes bounceArrowFirst {
+  0% {
+    transform: translate(0%, -55%);
+  }
+
+  100% {
+    transform: translate(430%, -55%);
+  }
+}
+
+@keyframes bounceArrowFirst {
+  0% {
+    transform: translate(0%, -55%);
+  }
+
+  100% {
+    transform: translate(430%, -55%);
+  }
+}

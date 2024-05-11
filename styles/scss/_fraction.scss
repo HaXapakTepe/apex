@@ -1,0 +1,24 @@
+.fraction {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1;
+  top: unset;
+  bottom: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-family: "Bayon";
+  color: #464749;
+  @include fluid(font-size, 16px, 20px);
+
+  .swiper-pagination {
+
+    &-current {
+      @include fluid(font-size, 20px, 36px);
+      color: #F83737;
+    }
+  }
+}
