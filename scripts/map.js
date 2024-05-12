@@ -25,8 +25,7 @@ if (document.querySelector('#mapYandex')) {
 				},
 				{
 					iconLayout: 'default#image',
-					// iconImageHref: '/apex/assets/images/icons/loca.svg',
-					iconImageHref: '../../assets/images/icons/loca.svg',
+					iconImageHref: '/apex/assets/images/icons/loca.svg',
 					iconImageSize: [48, 48],
 				}
 			)
@@ -34,14 +33,5 @@ if (document.querySelector('#mapYandex')) {
 		}
 
 		myMap.geoObjects.add(myCollection)
-
-		// Обработчик клика на адрес
-		var addressTitles = document.querySelectorAll('.stores__item-title')
-		addressTitles.forEach(function (title) {
-			title.addEventListener('click', function () {
-				var coords = this.getAttribute('data-coords').split(',')
-				myMap.setCenter([coords[0], coords[1]], 16)
-			})
-		})
 	}
 }
