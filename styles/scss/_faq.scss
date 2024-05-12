@@ -1,0 +1,151 @@
+.faq {
+  &__wrapper {
+    @include fluid(margin-top, 100px, 216px);
+    @include fluid(margin-bottom, 100px, 210px);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr .76fr .76fr;
+    @include fluid(gap, 20px, 90px);
+  }
+
+  &__item {
+    position: relative;
+    @include fluid(padding-top, 20px, 65px);
+    @include fluid(padding-bottom, 20px, 65px);
+    @include fluid(padding-left, 15px, 56px);
+    padding-right: 15px;
+    @include fluid(height, 500px, 620px);
+    overflow: hidden;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__accordion {
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 10px, 16px);
+
+    .border {
+
+      &__tl,
+      &__bl,
+      &__br,
+      &__tr {
+        border-color: #373737;
+        transition: border-color .23s ease-in-out;
+      }
+    }
+
+    &-item {
+      position: relative;
+      @include fluid(padding-top, 15px, 20px);
+      @include fluid(padding-bottom, 15px, 20px);
+      @include fluid(padding-left, 20px, 30px);
+      padding-right: 35px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #F83737;
+        transition: transform 0.23s ease-in-out, background-color 0.23s ease-in-out;
+      }
+
+      &::before {
+        @include fluid(top, 27px, 34px);
+        @include fluid(right, 13px, 22px);
+        @include fluid(width, 20px, 24px);
+        height: 2px;
+      }
+
+      &::after {
+        @include fluid(top, 18px, 23px);
+        @include fluid(right, 22px, 33px);
+        width: 2px;
+        @include fluid(height, 20px, 24px);
+      }
+
+      &.accordion--active {
+
+        &::before,
+        &::after {
+          background-color: #fff;
+        }
+
+        &::after {
+          transform: rotate(-90deg);
+        }
+
+        .faq__accordion {
+          &-title {
+            color: #fff;
+          }
+        }
+
+        .border {
+
+          &__tl,
+          &__bl,
+          &__br,
+          &__tr {
+            border-color: #fff;
+          }
+        }
+
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      color: #747577;
+      text-transform: uppercase;
+      transition: color .23s ease-in-out;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    &-text {
+      @include fluid(margin-top, 14px, 19px);
+      color: #B9BABA;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .faq {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      padding: 0;
+      height: unset;
+
+      &-img {
+        display: none;
+      }
+
+      &-title {
+        text-align: center;
+      }
+    }
+
+    &__accordion {
+      grid-column: unset;
+    }
+  }
+}

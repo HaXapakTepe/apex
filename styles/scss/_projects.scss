@@ -7,7 +7,6 @@
     &-box {
       position: absolute;
       right: 0;
-      right: 0;
       @include fluid(width, 580px, 960px);
     }
   }
@@ -84,6 +83,36 @@
       justify-content: space-between;
       gap: 15px;
       align-items: center;
+    }
+  }
+
+  &--alt {
+    .title--overlaid {
+      @include fluid(left, 10px, 120px);
+      right: unset;
+    }
+
+    .projects {
+      &__wrapper {
+        &-box {
+          right: unset;
+        }
+      }
+
+      &__item {
+        margin-left: auto;
+      }
+
+      &__slide {
+        &-box {
+          text-align: left;
+          // @include fluid(left, 20px, 50px);
+        }
+
+        &-text {
+          direction: ltr;
+        }
+      }
     }
   }
 }

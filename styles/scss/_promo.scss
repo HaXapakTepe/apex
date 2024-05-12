@@ -1,4 +1,20 @@
 .promo {
+
+  &--alt {
+    .promo {
+      &__wrapper {
+        grid-template-columns: 100%;
+      }
+
+      &__left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+  }
+
   &__wrapper {
     position: relative;
     display: grid;
@@ -49,8 +65,8 @@
 
     &-arrow {
       position: absolute;
-      @include fluid(top, -15px, -65px);
-      right: 0;
+      @include fluid(top, 0px, 5px);
+      @include fluid(left, 15px, 0px);
     }
   }
 
@@ -171,6 +187,201 @@
       object-fit: cover;
     }
   }
+
+  &__swiperAlt {
+    //fade
+    // .swiper {
+    //   &-slide {
+    //     position: relative;
+    //     opacity: 0;
+    //     transition: opacity 0.5s ease-in-out 1.5s;
+
+    //     &::after {
+    //       content: '';
+    //       position: absolute;
+    //       width: 100%;
+    //       height: 100%;
+    //       left: 0;
+    //       top: 0;
+    //       background: linear-gradient(-67.38deg, rgba(22, 23, 29, 0.75) 47.579%, rgba(22, 23, 29, 0.56) 67.133%, rgba(22, 23, 29, 0.15) 92.383%);
+    //       z-index: 1;
+    //       pointer-events: none;
+    //     }
+
+    //     &-prev {
+    //       .promo__swiperAlt-img {
+    //         transform: scale(.5);
+    //         transition: border-radius .5s ease-in-out 1s, transform .5s ease-in-out 1s;
+    //       }
+    //     }
+
+    //     &-next {
+    //       .promo__swiperAlt-img {
+    //         transform: scale(.5);
+    //       }
+    //     }
+
+    //     &-active {
+
+    //       .promo__swiperAlt-img {
+    //         transform: scale(1);
+    //         border-radius: unset;
+    //         transition: border-radius .5s ease-in-out 2s, transform .5s ease-in-out 2s, opacity .5s ease-in-out 2s;
+    //       }
+    //     }
+    //   }
+
+    //   &-pagination {
+    //     @include fluid(max-width, 600px, 940px);
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: end;
+    //     @include fluid(bottom, 40px, 140px);
+
+    //     .swiper-pagination-bullet {
+    //       width: 7px;
+    //       height: 7px;
+    //       border-radius: 0;
+    //       background-color: #fff;
+    //       margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 14px);
+    //       opacity: 1;
+    //       transition: width .23s ease-in-out, height .23s ease-in-out;
+
+    //       &-active {
+    //         width: 15px;
+    //         height: 15px;
+    //         background-color: #F83737;
+    //       }
+    //     }
+    //   }
+    // }
+
+    .swiper {
+      &-slide {
+        position: relative;
+        opacity: 0 !important;
+        transition: opacity 0.23s ease-in-out 1.5s;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: linear-gradient(-67.38deg, rgba(22, 23, 29, 0.75) 47.579%, rgba(22, 23, 29, 0.56) 67.133%, rgba(22, 23, 29, 0.15) 92.383%);
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        &-prev {
+          opacity: 0;
+
+          .promo__swiperAlt-img {
+            transform: scale(.5);
+            // transition: border-radius .5s ease-in-out 1s, transform .5s ease-in-out 1s;
+            transition: border-radius .5s ease-in-out 1s, transform .5s ease-in-out 1s, opacity .5s ease-in-out 1s;
+          }
+        }
+
+        &-next {
+          opacity: 0;
+
+          .promo__swiperAlt-img {
+            transform: scale(.5);
+            transition: border-radius .5s ease-in-out 1s, transform .5s ease-in-out 1s, opacity .5s ease-in-out 1s;
+          }
+        }
+
+        &-active {
+          opacity: 1 !important;
+
+          .promo__swiperAlt-img {
+            transform: scale(1);
+            border-radius: unset;
+            transition: border-radius .5s ease-in-out 2s, transform .5s ease-in-out 2s, opacity .5s ease-in-out 2s;
+          }
+        }
+      }
+
+      &-pagination {
+        height: 15px;
+        @include fluid(max-width, 600px, 940px);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @include fluid(bottom, 40px, 140px);
+
+        .swiper-pagination-bullet {
+          width: 7px;
+          height: 7px;
+          border-radius: 0;
+          background-color: #fff;
+          margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 14px);
+          opacity: 1;
+          transition: width .23s ease-in-out, height .23s ease-in-out;
+
+          &-active {
+            width: 15px;
+            height: 15px;
+            background-color: #F83737;
+          }
+        }
+      }
+    }
+
+    &-slide {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-47%);
+      right: 0;
+      z-index: 3;
+    }
+
+    &-img {
+      @include fluid(height, 500px, 898px);
+      -o-object-fit: cover;
+      object-fit: cover;
+      border-radius: 80px;
+      overflow: hidden;
+    }
+
+    &-box {
+      width: 100%;
+      @include fluid(max-width, 600px, 940px);
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      @include fluid(gap, 10px, 13px);
+    }
+
+    &-title {
+      @include fluid(max-width, 500px, 670px);
+      margin-left: auto;
+      text-align: right;
+      @include fluid(letter-spacing, 5px, 9px);
+    }
+
+    &-text {
+      @include fluid(max-width, 400px, 570px);
+      margin-left: auto;
+      text-align: right;
+      color: #fff;
+      line-height: 1.75;
+      @include fluid(margin-bottom, 0px, 15px);
+    }
+  }
 }
 
 @media (max-width: 1440px) {
@@ -262,7 +473,7 @@
 
     &__swiperSmall {
       max-width: 320px;
-      padding: 20px;
+      padding: 30px 20px 20px;
       bottom: 50px;
 
       .swiper {
