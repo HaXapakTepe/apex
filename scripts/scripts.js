@@ -83,6 +83,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		const mask = IMask(element, maskOptions)
 	}
+	// if (document.querySelector('.promo__swiperAlt')) {
+	// 	var swiperAlt = new Swiper('.promo__swiperAlt', {
+	// 		// loop: true,
+	// 		effect: 'fade',
+	// 		spaceBetween: 10,
+	// 		pagination: {
+	// 			el: '.promo__swiperAlt-pagination',
+	// 			// clickable: true,
+	// 		},
+	// 		// on: {
+	// 		// 	beforeSlideChangeStart: function () {
+	// 		// 		// Удаляем класс со всех слайдов перед переключением
+	// 		// 		var slides = document.querySelectorAll('.swiper-slide')
+	// 		// 		slides.forEach(function (slide) {
+	// 		// 			slide.classList.remove('swiper-slide--start')
+	// 		// 		})
+	// 		// 	},
+	// 		// 	slideChangeTransitionEnd: function () {
+	// 		// 		// Добавляем класс к активному слайду после переключения
+	// 		// 		var activeSlide = document.querySelector('.swiper-slide-active')
+	// 		// 		if (activeSlide) {
+	// 		// 			activeSlide.classList.add('swiper-slide--start')
+	// 		// 		}
+	// 		// 	},
+	// 		// },
+	// 	})
+	// }
+
 	if (document.querySelector('.promo__swiperAlt')) {
 		var swiperAlt = new Swiper('.promo__swiperAlt', {
 			// loop: true,
@@ -92,22 +120,21 @@ document.addEventListener('DOMContentLoaded', () => {
 				el: '.promo__swiperAlt-pagination',
 				// clickable: true,
 			},
-			// on: {
-			// 	beforeSlideChangeStart: function () {
-			// 		// Удаляем класс со всех слайдов перед переключением
-			// 		var slides = document.querySelectorAll('.swiper-slide')
-			// 		slides.forEach(function (slide) {
-			// 			slide.classList.remove('swiper-slide--start')
-			// 		})
-			// 	},
-			// 	slideChangeTransitionEnd: function () {
-			// 		// Добавляем класс к активному слайду после переключения
-			// 		var activeSlide = document.querySelector('.swiper-slide-active')
-			// 		if (activeSlide) {
-			// 			activeSlide.classList.add('swiper-slide--start')
-			// 		}
-			// 	},
-			// },
+			allowSlideNext: true, // Разрешаем переключение на следующий слайд
+			allowSlidePrev: true, // Разрешаем переключение на предыдущий слайд
+			on: {
+				slideChangeTransitionEnd: function () {
+					// Блокируем переключение на 3 секунд после смены слайда
+					this.allowSlideNext = false
+					this.allowSlidePrev = false
+
+					// Разблокируем переключение через 3 секунд
+					setTimeout(() => {
+						this.allowSlideNext = true
+						this.allowSlidePrev = true
+					}, 3000)
+				},
+			},
 		})
 	}
 	if (document.querySelector('.promo__swiperBig')) {
