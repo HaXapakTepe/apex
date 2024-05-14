@@ -3,7 +3,7 @@
     position: relative;
     @include fluid(margin-top, 100px, 223px);
     @include fluid(margin-bottom, 100px, 256px);
-    @include fluid(padding-top, 40px, 65px);
+    @include fluid(padding-top, 50px, 65px);
 
     &::after {
       content: '';
@@ -128,7 +128,7 @@
 @media(max-width: 576px) {
   .free {
     &__wrapper {
-      padding-bottom: 40px;
+      padding-bottom: 50px;
     }
 
     &__inner {

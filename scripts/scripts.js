@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const body = document.querySelector('body')
 	const burger = document.querySelector('.burger')
 	const menu = document.querySelector('.menu')
-	const menuItem = document.querySelectorAll('.menu__item')
 
 	const toggleMenu = () => {
 		menu.classList.toggle('menu--active')
@@ -20,16 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	burger.addEventListener('click', toggleMenu)
 	document.addEventListener('click', clickOutsideMenu)
-
-	// if (burger) {
-	//   menuItem.forEach((item) => {
-	//     item.addEventListener('click', () => {
-	//       burger.classList.toggle('active')
-	//       menu.classList.remove('active')
-	//       body.classList.remove('no-scroll')
-	//     })
-	//   })
-	// }
 
 	const accordion = document.querySelectorAll('.accordion')
 
@@ -83,52 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		const mask = IMask(element, maskOptions)
 	}
-	// if (document.querySelector('.promo__swiperAlt')) {
-	// 	var swiperAlt = new Swiper('.promo__swiperAlt', {
-	// 		// loop: true,
-	// 		effect: 'fade',
-	// 		spaceBetween: 10,
-	// 		pagination: {
-	// 			el: '.promo__swiperAlt-pagination',
-	// 			// clickable: true,
-	// 		},
-	// 		// on: {
-	// 		// 	beforeSlideChangeStart: function () {
-	// 		// 		// Удаляем класс со всех слайдов перед переключением
-	// 		// 		var slides = document.querySelectorAll('.swiper-slide')
-	// 		// 		slides.forEach(function (slide) {
-	// 		// 			slide.classList.remove('swiper-slide--start')
-	// 		// 		})
-	// 		// 	},
-	// 		// 	slideChangeTransitionEnd: function () {
-	// 		// 		// Добавляем класс к активному слайду после переключения
-	// 		// 		var activeSlide = document.querySelector('.swiper-slide-active')
-	// 		// 		if (activeSlide) {
-	// 		// 			activeSlide.classList.add('swiper-slide--start')
-	// 		// 		}
-	// 		// 	},
-	// 		// },
-	// 	})
-	// }
 
 	if (document.querySelector('.promo__swiperAlt')) {
 		var swiperAlt = new Swiper('.promo__swiperAlt', {
-			// loop: true,
 			effect: 'fade',
 			spaceBetween: 10,
 			pagination: {
 				el: '.promo__swiperAlt-pagination',
-				// clickable: true,
 			},
-			allowSlideNext: true, // Разрешаем переключение на следующий слайд
-			allowSlidePrev: true, // Разрешаем переключение на предыдущий слайд
+			allowSlideNext: true,
+			allowSlidePrev: true,
 			on: {
 				slideChangeTransitionEnd: function () {
-					// Блокируем переключение на 3 секунд после смены слайда
 					this.allowSlideNext = false
 					this.allowSlidePrev = false
 
-					// Разблокируем переключение через 3 секунд
 					setTimeout(() => {
 						this.allowSlideNext = true
 						this.allowSlidePrev = true
@@ -377,40 +335,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		})
 	}
-
-	// const slidersSwipers = []
-	// const sliderSwiper = document.querySelectorAll('.slider__swiper')
-	// sliderSwiper?.forEach((swiper, index) => {
-	// 	slidersSwipers.push(setSlidersSwiper(index + 1))
-	// })
-	// function setSlidersSwiper(index) {
-	// 	return new Swiper(`.slider__swiper--${index}`, {
-	// 		navigation: {
-	// 			prevEl: `.slider__arrow-prev--${index}`,
-	// 			nextEl: `.slider__arrow-next--${index}`,
-	// 		},
-	// 		breakpoints: {
-	// 			992: {
-	// 				slidesPerView: 3,
-	// 				spaceBetween: 32,
-	// 			},
-	// 			768: {
-	// 				slidesPerView: 2.1,
-	// 				spaceBetween: 24,
-	// 			},
-	// 			576: {
-	// 				slidesPerView: 1.6,
-	// 				spaceBetween: 16,
-	// 			},
-	// 			414: {
-	// 				slidesPerView: 1.5,
-	// 				spaceBetween: 12,
-	// 			},
-	// 			320: {
-	// 				slidesPerView: 1.1,
-	// 				spaceBetween: 12,
-	// 			},
-	// 		},
-	// 	})
-	// }
 })

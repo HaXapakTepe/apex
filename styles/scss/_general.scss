@@ -8,20 +8,6 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-// &::-webkit-scrollbar {
-// 	width: 5px;
-// 	background-color: transparent;
-// }
-
-// &::-webkit-scrollbar-thumb {
-// 	background-color: #6C6C6C;
-// 	border-radius: 25px;
-// }
-
-// &::-webkit-scrollbar-track {
-// 	margin: 5px;
-// }
-
 ul {
 	list-style: none;
 }
@@ -30,41 +16,6 @@ img {
 	width: 100%;
 	display: block;
 }
-
-// кастомная нумерация блоков
-// ol {
-//   counter-reset: num;
-//   list-style: decimal-leading-zero;
-
-//   li {
-//     &:before {
-//       content: counter(num, decimal-leading-zero);
-//       counter-increment: num;
-//       color: #FF7707;
-//       font-size: 40px;
-//       font-weight: 500;
-//       line-height: 120%;
-//       letter-spacing: -0.2px;
-//     }
-//   }
-// }
-
-// кол-во строк в блоке
-// * {
-//   display: -webkit-box;
-//   -webkit-line-clamp: 4;
-//   -webkit-box-orient: vertical;
-//   overflow: hidden;
-// }
-// обратиться к label в котором input
-// &:focus-within {
-//   border-color: #D9291D;
-// }
-
-// фокус лейблу родителю
-// &:focus-within {
-//   border-color: #d9291d;
-// }
 
 input,
 button {
@@ -79,6 +30,10 @@ fieldset {
 
 a {
 	text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 html,
@@ -152,7 +107,14 @@ body {
 	}
 }
 
+.modal {
+	display: none;
 
+	&.fancybox__content {
+		padding: 0;
+		background-color: #18191C;
+	}
+}
 
 
 @media (max-width: 1366px) {}
