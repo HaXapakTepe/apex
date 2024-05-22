@@ -335,4 +335,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		})
 	}
+
+	let element = document.getElementById('myElement')
+	let start
+
+	function animate(timestamp) {
+		if (!start) start = timestamp
+		let progress = timestamp - start
+		element.style.opacity = 1
+		element.style.visibility = 'visible'
+		if (progress < 2000) {
+			window.requestAnimationFrame(animate)
+		}
+	}
+
+	window.requestAnimationFrame(animate)
 })
